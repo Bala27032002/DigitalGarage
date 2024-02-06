@@ -1,0 +1,13 @@
+/* Customized modal backdrop */
+.modal-backdrop {
+    --bs-backdrop-zindex: 1050;
+    --bs-backdrop-opacity: 0.5;
+    top: 0;
+    left: 0;
+    z-index: var(--bs-backdrop-zindex);
+    /* width: 100vw; */
+    /* height: 100vh; */
+    background-color: transparent; /* Remove the background color */
+    position: relative;
+    bottom: 200px;
+}

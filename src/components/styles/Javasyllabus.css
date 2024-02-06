@@ -1,0 +1,26 @@
+.syllabus-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .bullet {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:orangered;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+  
+  }
+  
+  .syllabus-list li:hover .bullet {
+    transform: scale(1.2);
+  }
+  .syllabus-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }

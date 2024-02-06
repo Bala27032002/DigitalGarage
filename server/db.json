@@ -1,0 +1,100 @@
+{
+  "tasks": [
+    {
+      "coursesName": "MERN",
+      "description": "The MERN stack has gained significant popularity among developers due to its flexibility, efficiency, and ease of use to developing modern web applications",
+      "duration": "6 hours",
+      "url": "https://tse2.mm.bing.net/th?id=OIP.MhKmbF64ui1-CEzKCazLgwHaDt&pid=Api&P=0&h=180",
+      "category": "SOFTWARE DEVELOPMENT",
+      "id": 10
+    },
+    {
+      "coursesName": "MEAN",
+      "description": "MongoDB is a NoSQL database that allows for flexible and scalable data storage. In the course,perform CRUD operations, and design efficient database schemas Application",
+      "duration": "6 months",
+      "url": "https://tse4.mm.bing.net/th?id=OIP.RkuIfaHa54l2SntLT21JAAHaEK&pid=Api&P=0&h=180",
+      "category": "SOFTWARE DEVELOPMENT",
+      "id": 11
+    },
+    {
+      "coursesName": ".NET DEVELOPMENT",
+      "description": "A .NET course provides comprehensive training in the Microsoft .NET framework, equipping students with the skills to develop robust and scalable web and desktop application.",
+      "duration": "6 months",
+      "url": "https://tse4.mm.bing.net/th?id=OIP.cI1C4rf1BrZzr6NrYg1iYwHaD3&pid=Api&P=0&h=180",
+      "category": "SOFTWARE DEVELOPMENT",
+      "id": 12
+    },
+    {
+      "coursesName": "\tFULLSTACK",
+      "description": "Course provides comprehensive training in both front-end and back-end web development & skills to create fully functional web applications.it is cally by a full stack development",
+      "duration": "6 months",
+      "url": "https://tse2.mm.bing.net/th?id=OIP.UhnZs_RgbtVTR56Rsrm40gHaEE&pid=Api&P=0&h=180",
+      "category": "SOFTWARE DEVELOPMENT",
+      "id": 13
+    },
+    {
+      "coursesName": "EMBEDDED SYSTEM DESIGN",
+      "description": "Embedded systems are specialized computer systems designed to perform specific tasks within larger systems and dedicated to performing a specific function with real-time requirements.",
+      "duration": "6 months",
+      "url": "https://tse3.mm.bing.net/th?id=OIP.uftotx_Haal8aPFhNjx27gEsCo&pid=Api&P=0&h=180",
+      "category": "AUTOMOTIVE EMBEDDED",
+      "id": 14
+    },
+    {
+      "coursesName": "SENSOR",
+      "description": "\tSensors are devices that detect and measure physical phenomena and convert them into electrical signals.They play a crucial role in various industries,and environmental monitoring.",
+      "duration": "6 tamies",
+      "url": "https://tse2.mm.bing.net/th?id=OIP.m8VZHKRc_pFgtXN7t8SxbQHaEK&pid=Api&P=0&h=180",
+      "category": "AUTOMOTIVE EMBEDDED",
+      "id": 15
+    },
+    {
+      "coursesName": "JAVA+SELENIUM PROGRAM",
+      "description": "The Program is designed to make the learner expert in Java and Selenium. Program covers Java Programming and in-depth Selenium. You will be learn in detail about Automation testing",
+      "duration": "\t6 months",
+      "url": "https://tse4.mm.bing.net/th?id=OIP.PlKePfJmW5mPSv6PtMZV1QHaEK&pid=Api&P=0&h=180",
+      "category": "TESTING TRACK",
+      "id": 16
+    },
+    {
+      "coursesName": "JAVA+JMETER PROGRAM",
+      "description": "The Program is designed to make the learner expert in Java and JMeter. The program covers Java Programming and in-depth JMeter. You will learn in detail about Performance testing",
+      "duration": "6 months",
+      "url": "https://tse4.explicit.bing.net/th?id=OIP.saROpQwpPCakEte3IK9mmgHaEB&pid=Api&P=0&h=180",
+      "category": "TESTING TRACK",
+      "id": 17
+    },
+    {
+      "coursesName": "JAVA+TOSCO PROGRAM",
+      "description": "Program is designed to make the learner expert in Java and Tosca. Program covers Java Programming and Tosca. At the end of the course learner is ready for the  Test Specialist Certifications.",
+      "duration": "6 months",
+      "url": "https://tse1.mm.bing.net/th?id=OIP.A4eaw73gUzV6jMRaeNDDOwHaEK&pid=Api&rs=1&c=1&qlt=95&h=180",
+      "category": "TESTING TRACK",
+      "id": 18
+    },
+    {
+      "coursesName": "FLUID MECHANICAL DESIGN",
+      "description": "fluid mechanics, science concerned with the response of fluids to forces exerted upon them. It is a branch of classical physics with applications of great importance in hydraulic and aeronautical engineering, chemical engineering, meteorology, and zoology.",
+      "duration": "6 months",
+      "url": "https://tse3.mm.bing.net/th?id=OIP.QXYtaASk_9TgasmWGO-1hwHaEH&pid=Api&P=0&h=180",
+      "category": "MECHANICAL DESIGN",
+      "id": 19
+    },
+    {
+      "coursesName": "SOLID MECHANICAL DESIGN",
+      "description": "Solid mechanics (also known as mechanics of solids) is the branch of continuum mechanics that studies the behavior of solid materials, especially their motion and deformation under the action of forces, temperature changes, phase changes, and other external or internal agents.",
+      "duration": "6 months",
+      "url": "https://tse4.mm.bing.net/th?id=OIP.IOpKM6pZrhoOks-oyDvO9wHaEK&pid=Api&P=0&h=180",
+      "category": "MECHANICAL DESIGN",
+      "id": 20
+    },
+    {
+      "coursesName": "MACHINE LEARNING",
+      "description": "      \"course is a powerful and versatile operating system developed by OpenAI for controlling and orchestrating laboratory automation. It provides a unified platform for managing complex scientific workflows in a scalable manner.\",",
+      "duration": "3",
+      "url": "https://tse3.mm.bing.net/th?id=OIP.QXYtaASk_9TgasmWGO-1hwHaEH&pid=Api&P=0&h=180",
+      "category": "MECHANICAL DESIGN",
+      "id": 21
+    }
+  ]
+}

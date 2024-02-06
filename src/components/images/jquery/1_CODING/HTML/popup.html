@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> 
+
+</head>
+<body>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal">Open Feedback</button>
+<div class="modal" id="mymodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="fw-bold mb-4">Feedback</h4>
+                <button class="close" type="button" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="feedbackForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Username<span class="ms-2" style="color:red;">*</span></label>
+                        <input id="name" type="text" name="data[name]" class="form-control" placeholder="Name">
+                        <div id="alertName" class="alert alert-danger p-1 text-center mx-auto my-2" style="display:none;">
+                            Should be consisting of a capital letter and 2-15 small letters.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email<span class="ms-2" style="color: red;">*</span></label>
+                        <input id="email" type="email" name="data[email]" class="form-control" placeholder="Email">
+                        <div id="alertEmail" class="alert alert-danger p-1 text-center mx-auto my-2" style="display:none;">
+                            Should be consisting of 3-15 characters and end with (@"Domain name".com).
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" name="data[message]" maxlength="150" rows="3" placeholder="Message"></textarea>
+                        <p class="count mb-0"><span id="counter">150</span> : Counter</p>
+                        <div id="alertMessage" class="alert alert-danger p-1 text-center mx-auto mt-0 mb-2" style="display:none;">
+                            Must not exceed 150 characters.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p id="alertSend" class="fs-6 mb-0 w-50 text-center mx-auto"></p>
+                        <button id="sendMessage" type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane me-3"></i> Send message</button>
+                        <button id="reset" type="button" class="btn btn-secondary"><i class="fa-solid fa-rotate-left me-2"></i> Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script>
+    $(document).ready(function() {
+        // Form submission event
+        $('#feedbackForm').submit(function(e) {
+            e.preventDefault();
+            sendValidMessage();
+        });
+
+        // Reset form event
+        $('#reset').click(function() {
+            resetForm();
+        });
+
+        // Add your JavaScript code here
+        function sendValidMessage() {
+            // Validate form inputs
+            if (isInputEmpty() || !validUserName() || !validUserEmail() || !validTextMessage()) {
+                $('#alertSend').html('Please fill in all the required fields correctly.');
+                $('#alertSend').css({ 'display': 'block', 'color': 'red' });
+            } else {
+                $('#alertSend').html('The message was sent successfully');
+                $('#alertSend').css({ 'display': 'block', 'color': 'green' });
+                resetForm();
+                // Perform form submission here
+                // Example: $('#feedbackForm').submit();
+            }
+        }
+
+        function isInputEmpty() {
+            return $('#name').val() === '' || $('#email').val() === '' || $('#message').val() === '';
+        }
+
+        function validUserName() {
+            let regexName = /^[A-Z][a-z- ]{2,8}$/;
+            if (regexName.test($('#name').val())) {
+                $('#name').addClass('is-valid');
+                $('#name').removeClass('is-invalid');
+                $('#alertName').css('display', 'none');
+                return true;
+            } else {
+                $('#name').addClass('is-invalid');
+                $('#name').removeClass('is-valid');
+                $('#alertName').css('display', 'block');
+                return false;
+            }
+        }
+
+        function validUserEmail() {
+            let regexEmail = /^[A-Za-z \._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/;
+            if (regexEmail.test($('#email').val())) {
+                $('#email').addClass('is-valid');
+                $('#email').removeClass('is-invalid');
+                $('#alertEmail').css('display', 'none');
+                return true;
+            } else {
+                $('#email').addClass('is-invalid');
+                $('#email').removeClass('is-valid');
+                $('#alertEmail').css('display', 'block');
+                return false;
+            }
+        }
+
+        function validTextMessage() {
+            let regexMsg = /^[a-zA-Z0-9- ]{1,150}$/;
+            if (regexMsg.test($('#message').val())) {
+                $('#message').addClass('is-valid');
+                $('#message').removeClass('is-invalid');
+                $('#alertMessage').css('display', 'none');
+                return true;
+            } else {
+                $('#message').addClass('is-invalid');
+                $('#message').removeClass('is-va+lid');
+                $('#alertMessage').css('display', 'block');
+                return false;
+            }
+        }
+
+        function resetForm() {
+            $('#name').val('');
+            $('#email').val('');
+            $('#message').val('');
+            $('.form-control').removeClass('is-valid is-invalid');
+            $('#alertName').css('display', 'none');
+            $('#alertEmail').css('display', 'none');
+            $('#alertMessage').css('display', 'none');
+            $('#counter').text('150');
+        }
+
+        $('#message').on('input', function() {
+            var messageLength = $(this).val().length;
+            var remainingCharacters = 150- messageLength;
+            // $('#counter').text(remainingCharacters);
+        });
+    });
+</script>
+
+</body>
+</html>
+
+  
