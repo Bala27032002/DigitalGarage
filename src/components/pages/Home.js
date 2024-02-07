@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+  import React, { useState, useEffect } from "react";
 import Layout from "../Layout/Layout";
 import "../styles/HomeStyles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -52,9 +52,16 @@ const Home = () => {
 
   // Handle loading or error conditions
   if (sliderImages.length === 0) {
-    return <div>Loading...</div>;
+    return (
+      <Layout>
+        <div style={{fontSize:'2rem'}}>(slider is empty please login and upload the image ...)</div>
+        <Course />
+        <Component2 />
+        <Component3 />
+        <Component2 />
+      </Layout>
+    );
   }
-
   return (
     <Layout>
       <div className="slider-container">

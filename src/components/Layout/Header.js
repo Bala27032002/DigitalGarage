@@ -182,10 +182,10 @@ const Header = () => {
             </Box>
               {/* <img src={Logo} alt="logo" height={70} width="250" /> */}
             </Typography>
-            <NavLink to="/" style={{marginRight:'2rem',textDecoration:'none'}}>
+            <NavLink to="/" style={{marginRight:'2rem',textDecoration:'none',color:'white'}}>
                    SPECIAL OFFER
                   </NavLink>
-                  <NavLink to="/" style={{marginRight:'2rem',textDecoration:'none'}}>
+                  <NavLink to="/" style={{marginRight:'2rem',textDecoration:'none',color:'white'}}>
                    PURCHASE THEME
                   </NavLink>
             <NavLink to="/Login" style={{background:'white'}}>
@@ -222,3 +222,4 @@ const Header = () => {
 };
 
 export default Header;
+
