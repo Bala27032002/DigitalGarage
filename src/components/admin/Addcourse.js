@@ -10,8 +10,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import axios from "axios";
-
-import Topnav from "./Topnav";
 import { useNavigate } from "react-router";
 import AdminImageTable from "./AdminTable";
 
@@ -54,12 +52,10 @@ const AddCourse = ({ updateTasksList }) => {
   const theme = useTheme();
   const navigate = useNavigate();
   const [value, setValue] = useState(0);
-  const [courseName, setCourseName] = useState("");
   const [description, setDescription] = useState("");
-  const [category, setCategory] = useState("");
   const [url, setUrl] = useState("");
   const [duration, setDuration] = useState("");
-  const [categories, setCategories] = useState([]);
+
   const isAuthenticated = sessionStorage.getItem("authenticated") === "true";
 
   useEffect(() => {
@@ -68,31 +64,12 @@ const AddCourse = ({ updateTasksList }) => {
     }
   }, [isAuthenticated, navigate]);
 
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
-  const fetchCategories = () => {
-    axios
-      .get(`${baseUrl}/Categories`)
-      .then((response) => {
-        setCategories(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching categories:", error);
-      });
-  };
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const handleChangeIndex = (index) => {
     setValue(index);
-  };
-
-  const handleCourseNameChange = (e) => {
-    setCourseName(e.target.value);
   };
 
   const handleDescriptionChange = (e) => {
@@ -107,33 +84,24 @@ const AddCourse = ({ updateTasksList }) => {
     setUrl(e.target.value);
   };
 
-  const handleCategoryChange = (e) => {
-    setCategory(e.target.value);
-  };
-
   const addTask = async (e) => {
     e.preventDefault();
 
-    // Validation logic for courseName, description, duration, url, and category
-    // ...
-
     try {
       const response = await axios.post(`${baseUrl}/tasks`, {
-        courseName,
         description,
-        category,
         url,
         duration,
       });
 
       if (response.status === 201) {
         const newTask = response.data;
-        updateTasksList(newTask);
-        setCourseName("");
+
         setDescription("");
-        setCategory("");
         setDuration("");
         setUrl("");
+        // window.location.reload(); // Reload the page
+        alert("Added successfully");
       } else {
         console.error("Failed to add the task.");
       }
@@ -144,7 +112,6 @@ const AddCourse = ({ updateTasksList }) => {
 
   return (
     <>
-      <Topnav />
       {/* <div className="mano" style={{position:"absolute",left:"290px",fontSize:"20px",top:"-35px"}}>
      <Breadcrumbs  items={breadcrumbItems}   />
      </div> */}
@@ -166,7 +133,7 @@ const AddCourse = ({ updateTasksList }) => {
             <div className="col-md-12">
               <a href="http://localhost:3000" className="text-decoration-none">
                 <p className="oc" style={{ marginTop: "40px" }}>
-                  HOME /COURSE MANAGEMENT
+                  HOME /ADMIN MANAGEMENT
                 </p>
               </a>
             </div>
@@ -203,7 +170,7 @@ const AddCourse = ({ updateTasksList }) => {
                 aria-label="full width tabs example"
                 bgcolor="#00897b"
               >
-                <Tab label="Add Course" {...a11yProps(0)} />
+                <Tab label="Add Lists" {...a11yProps(0)} />
                 <Tab label="Carousel Lists" {...a11yProps(1)} />
               </Tabs>
             </AppBar>

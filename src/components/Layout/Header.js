@@ -86,7 +86,7 @@ const Header = () => {
       onClick={handleDrawerToggle}
       sx={{
         textAlign: "center",
-        bgcolor: isMobile ? "white" : "transparent",
+        bgcolor: isMobile ? "green" : "transparent",
         color: isMobile ? "black" : "white",
       }}
     >
@@ -129,14 +129,14 @@ const Header = () => {
   return (
     <>
       <Box>
-        <AppBar component="nav" sx={{ bgcolor: "#136330" }}>
+        <AppBar component="nav" sx={{ bgcolor: "green" }}>
           <Toolbar>
             {isMobile && (
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
                 edge="start"
-                sx={{ mr: 2, color: "black" }}
+                sx={{ mr: 2, color: "white" }}
                 onClick={handleDrawerToggle}
               >
                 <MenuIcon />
@@ -205,6 +205,7 @@ const Header = () => {
               display: isMobile ? "block" : "none",
               "& .MuiDrawer-paper": {
                 boxSizing: "border-box",
+                background:"green",
                 width: "240px",
               },
             }}
