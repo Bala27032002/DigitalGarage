@@ -229,7 +229,6 @@ const AddCourse = ({ updateTasksList }) => {
               </TabPanel>
             </SwipeableViews>
           </Box>
-          {/* <AdminForm /> */}
         </div>
       </section>
     </>

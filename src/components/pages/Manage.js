@@ -8,10 +8,6 @@ import {
   Rating,
 } from "@mui/material";
 import { CardContent, CardMedia, CardActions } from "@mui/material";
-import Box from "@mui/material/Box";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Layout from "../Layout/Layout";
 import axios from "axios";
 // import CareerSection from "./Careersection";
 import { makeStyles } from "@mui/styles";
